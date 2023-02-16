@@ -1,0 +1,261 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Profile Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        backgroundColor: const Color(0xfff4bdff),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage('https://scontent.fdvo3-1.fna.fbcdn.net/v/t1.6435-9/145976471_1605010596553677_6176764472713376334_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGqhd48UKNO4c8BKFCQyyPLs5wYABI4dYSznBgAEjh1hFmYiph-Q0hqI-fYhui6SGTW8aBbEe_3ZAtidq5poTEw&_nc_ohc=-6jiwj9GCcYAX9KxO0U&_nc_ht=scontent.fdvo3-1.fna&oh=00_AfB7QgA_bk204ETJ8Bbuez3XlSun5aBISPWmBHFibSwEeg&oe=64151226')
+                      ),
+                      color: Colors.blue,
+                    ),
+                    height: 72,
+                    width: 72
+                  ),
+                  const SizedBox(width: 16),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text('Henzbely Jude Sadaba',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold, 
+                          fontSize: 18
+                        ),
+                      ),
+                      Text('Aggressive Investor',
+                        style: TextStyle(
+                          color: Colors.grey, 
+                          fontSize: 14
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+              Container(
+                color: Colors.black12,
+                height: 1,
+                margin: const EdgeInsets.only(top: 32, bottom: 32),
+              ),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.person),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('Personal Data')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.settings),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('Settings')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.description),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('E-Statement')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.favorite),
+                  ),
+                  const SizedBox(width: 12),
+                  const Expanded(child: Text('Refferal Code')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+               Container(
+                color: Colors.black12,
+                height: 1,
+                margin: const EdgeInsets.only(top: 32, bottom: 32),
+              ),
+              
+              const SizedBox(height: 9),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.pending),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('FAQs')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.edit),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('Our handbook')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+               const SizedBox(height: 16),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xFFeceffe)),
+                    height: 40,
+                    width: 40,
+                    child: const Icon(Icons.groups),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(child: Text('Community')),
+                  const Icon(Icons.arrow_forward_ios, size: 16),
+                ],
+                
+              ),
+              
+              
+               const SizedBox(height: 50),
+              Row(
+                children: [
+                  Container(
+                    
+                    
+                    padding: const EdgeInsets.all(50),
+                   
+                    child: const Icon(Icons.home),
+                  ),
+                  
+                   Container(
+                    
+                    
+                    padding: const EdgeInsets.all(50),
+                    child:  const Icon(Icons.comment),
+                  ),
+                  
+                   Container(
+                    
+                    
+                    padding: const EdgeInsets.all(50),
+                    child:  const Icon(Icons.mail),
+                  ),
+                  
+                   Container(
+                    
+                    
+                    padding: const EdgeInsets.all(50),
+                    child:  const Icon(Icons.person),
+                  ),
+                  
+                 
+                 
+                ],
+                
+              ),
+              
+              
+                 
+              ]
+           
+          ),
+        )
+      ) // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
